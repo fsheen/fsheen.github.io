@@ -50,3 +50,19 @@ $on-laptop:        800px;
         "layout",
         "syntax-highlighting"
 ;
+
+
+/* configurations */
+$primary-color: #F3F8FF;
+$lnk-color: #afafaf;
+$lnk-highlight-color: #333;
+
+/* IMPORT CSS FILES */
+// base css
+@import "site";
+// syntax highlighting
+@import "syntax";
+// bootstrap
+@import "bootstrap.min";
+// fontawesome icons
+@import "font-awesome.min";
