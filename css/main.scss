@@ -18,8 +18,14 @@ $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
 
 $grey-color:       #828282;
+$twitter-color:    #333;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
+
+/* configurations */
+$primary-color: #F3F8FF;
+$lnk-color: #afafaf;
+$lnk-highlight-color: #333;
 
 // Width of the content area
 $content-width:    800px;
@@ -48,21 +54,15 @@ $on-laptop:        800px;
 @import
         "base",
         "layout",
-        "syntax-highlighting"
+        "syntax-highlighting"       
+         "site" // base css
+
+         "bootstrap.min"// bootstrap
+         "font-awesome.min"// fontawesome icons
 ;
 
 
-/* configurations */
-$primary-color: #F3F8FF;
-$lnk-color: #afafaf;
-$lnk-highlight-color: #333;
 
-/* IMPORT CSS FILES */
-// base css
-@import "site";
-// syntax highlighting
-@import "syntax";
-// bootstrap
-@import "bootstrap.min";
-// fontawesome icons
-@import "font-awesome.min";
+
+
+
