@@ -47,7 +47,22 @@
 
       <div class="footer-col  footer-col-3">
         <p class="text">{{ site.description }}</p>
+
       </div>
+
+         <div class="footer-col  footer-col-4">   
+               
+                   <a id="twitter-ic" class="link" href="https://twitter.com/{{site.owner.twitter}}">
+                                <i class="fa fa-twitter fa-lg"></i>
+                            </a>
+                            <a id="git-ic" class="link" href="https://github.com/{{site.owner.github}}">
+                                <i class="fa fa-github-square fa-lg"></i>
+                            </a>
+                            <a id="rss-ic" class="link" href="{{ "/feed.xml" | prepend: site.url }}">
+                                <i class="fa fa-rss fa-lg"></i>
+                            </a>
+        </div>
+                  
     </div>
 
   </div>
