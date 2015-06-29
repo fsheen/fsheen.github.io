@@ -22,10 +22,7 @@ $twitter-color:    #333;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
-/* configurations */
-$primary-color: #F3F8FF;
-$lnk-color: #afafaf;
-$lnk-highlight-color: #333;
+
 
 // Width of the content area
 $content-width:    800px;
@@ -55,10 +52,7 @@ $on-laptop:        800px;
         "base",
         "layout",
         "syntax-highlighting"       
-         "site" // base css
 
-         "bootstrap.min"// bootstrap
-         "font-awesome.min"// fontawesome icons
 ;
 
 
