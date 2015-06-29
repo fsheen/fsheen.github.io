@@ -4,12 +4,32 @@ title: Archive
 ---
 
 <div id="home">
-  <h1>Archive ({{ site.posts | size }} posts)</h1>
+  <h6>Archive ({{ site.posts | size }} posts)</h6>
   <ul class="posts">
+  {% assign year = "" %}
     {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
-      <a class="bar" href="#" title="{{  page.content | number_of_words }} words"
-            style="width:{{ width | ceil  }}px;">&nbsp;</a></li>
+    {% unless post.tags contains "speaking" %}
+        {% assign post_words = 0 %}
+        {% assign lines = post.content|split:'pre>' %}
+        {% for line in lines %}
+            {% assign mod = forloop.index|modulo:2 %}
+            {% assign line_words = line|strip_html|number_of_words|times:mod %}
+            {% assign post_words = post_words|plus:line_words %}
+        {% endfor %}
+    {% assign current_year = post.date|date:"%Y" %}
+    {% if current_year != year %}
+    {% assign year = current_year %}
+    <!--<li><h5>{{ year }}</h5></li>-->
+    {% endif %}
+    {% assign width = post_words | divided_by:20 %}
+    {% assign width = width | plus:10 %}
+      
+      <li>
+      <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
+      <a class="bar" href="#" title="{{ post_words }} words"
+            style="width:{{ width | ceil  }}px;">&nbsp;</a>
+      </li>
+      {% endunless %}
     {% endfor %}
   </ul>
 
