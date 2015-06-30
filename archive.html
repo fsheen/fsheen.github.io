@@ -28,7 +28,7 @@ title: Archive
         <span class="date">{{ post.date | date_to_string }}</span>
         <span class="arrow">&raquo;</span>
         <a href="{{ post.url }}">{{ post.title }}</a>
-        <a class="bar" href="#" title="{{ post_words }} words"
+        <a class="bar" href="#" data-toggle="tooltip" data-placement="right" title="{{ post_words }} words"
             style="width:{{ width | ceil  }}px;">&nbsp;</a>
       </li>
       {% endunless %}
